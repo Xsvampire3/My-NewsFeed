@@ -67,6 +67,8 @@ const saveNews = () => {
 };
 
 const loadSavedNews = () => {
+  console.log("Saved News", savedNews)
+  newsContainer.innerHTML = "";
   //const savedNews = JSON.parse(localStorage.getItem("savedNews"));
   //console.log("saved news from storage", savedNews)
   if (!savedNews) {
