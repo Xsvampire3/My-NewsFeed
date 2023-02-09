@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>News Feed</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1 id="logo">My NewsFeed</h1>
+    </header>
+    <nav>
+      <div id="header">
+      <select id="categorySelect">
+        <option value="science">Science</option>
+        <option value="all">All</option>
+        <option value="business">Business</option>
+        <option value="sports">Sports</option>
+        <option value="world">World</option>
+        <option value="politics">Politics</option>
+        <option value="hatke">Hatke</option>
+        <option value="automobile">Automobile</option>
+      </select>
+      <button id="loadNewsButton" onclick="showDiv()">Load News</button>
+      <button id="loadSavedButton">Load Saved</button>
+    </div>
+    </nav>
+    <main>
+      <div id="hidden" style="display: none;">
+      <div id="newsContainer"></div>
+      <div class="loader"></div>
+      <button id="saveButton">Save</button>
+    </div>
+    <div id="text">
+      <div id="text1">Get Latest News</div>
+      <div id="text2">Stay Updated!</div>
+    </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
