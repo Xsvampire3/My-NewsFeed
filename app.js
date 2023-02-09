@@ -9,6 +9,15 @@ function showDiv() {
   document.querySelector('#hidden').style.display = "block";
 }
 
+const savedNews = [];
+
+const handleSavedNews = (savedItem) => {
+   
+    savedNews.push(savedItem);
+  console.log(savedNews);
+  alert("News saved")
+}
+
 const getNews = (category = "science") => {
   newsContainer.innerHTML = "";
   fetch(`https://inshorts.deta.dev/news?category=${category}`)
@@ -29,8 +38,15 @@ const getNews = (category = "science") => {
           <p>Time:- ${newsItem.time}</p>
           </div>
           </div>
-          <button class="likeButton">Like</button>
         `;
+        const button = document.createElement("button");
+        button.style.color = 'blue';
+        button.style.backgroundColor = 'gold';
+        button.innerHTML = "Save"
+        button.onclick = function () {
+        handleSavedNews(newsItem)
+        }
+        div.appendChild(button);
         newsContainer.appendChild(div);
       });
       loader.style.display = "none";
@@ -51,8 +67,8 @@ const saveNews = () => {
 };
 
 const loadSavedNews = () => {
-  const savedNews = JSON.parse(localStorage.getItem("savedNews"));
-  console.log("saved news from storage", savedNews)
+  //const savedNews = JSON.parse(localStorage.getItem("savedNews"));
+  //console.log("saved news from storage", savedNews)
   if (!savedNews) {
     return;
   }
@@ -62,13 +78,11 @@ const loadSavedNews = () => {
     div.innerHTML = `
     <h2>${newsItem.title}</h2>
     <p>${newsItem.content}</p>
-    <button class="likeButton">Like</button>
     `;
     newsContainer.appendChild(div);
   });
 };
 
-saveButton.addEventListener("click", saveNews);
 loadSavedButton.addEventListener("click", loadSavedNews);
 loadNewsButton.addEventListener("click", () => {
   getNews(categorySelect.value);
