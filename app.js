@@ -45,6 +45,7 @@ const getNews = (category = "science") => {
         button.style.border = 'none';
         button.style.marginTop = '10px';
         button.style.cursor = 'pointer';
+        button.style.padding = '5px';
         button.innerHTML = "Save"
         button.onclick = function () {
         handleSavedNews(newsItem)
