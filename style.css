@@ -24,11 +24,11 @@ main {
 
 .newsItem {
   border: 1px solid black;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   padding: 20px;
   text-align: left;
   border-radius: 16px;
-  box-shadow: 5px 10px 8px 10px #f8f6f6;
+  box-shadow: 2px 5px 3px 5px #818080;
   background-color:  #ffb766;
 }
 
