@@ -40,8 +40,11 @@ const getNews = (category = "science") => {
           </div>
         `;
         const button = document.createElement("button");
-        button.style.color = 'blue';
-        button.style.backgroundColor = 'gold';
+        button.style.color = 'black';
+        button.style.backgroundColor = 'orange';
+        button.style.border = 'none';
+        button.style.marginTop = '10px';
+        button.style.cursor = 'pointer';
         button.innerHTML = "Save"
         button.onclick = function () {
         handleSavedNews(newsItem)
