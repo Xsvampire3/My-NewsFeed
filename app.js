@@ -40,8 +40,8 @@ const getNews = (category = "science") => {
           </div>
         `;
         const button = document.createElement("button");
-        button.style.color = 'black';
-        button.style.backgroundColor = 'orange';
+        button.style.color = 'white';
+        button.style.backgroundColor = 'grey';
         button.style.border = 'none';
         button.style.marginTop = '10px';
         button.style.cursor = 'pointer';
