@@ -24,12 +24,11 @@ main {
 
 .newsItem {
   border: 1px solid black;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 20px;
   text-align: left;
   border-radius: 16px;
-  box-shadow: 2px 5px 3px 5px #818080;
-  background-color:  #ffb766;
+  background-color:  silver;
 }
 
 .savense {
@@ -76,7 +75,7 @@ main {
   font-size: 20px;
   padding: 10px;
   border-radius: 16px;
-  background-color: #edf756;
+  background-color: #f2d53c;
 }
 
 #loadNewsButton:hover, #loadSavedButton:hover, #categorySelect:hover, #saveButton:hover {
@@ -91,7 +90,7 @@ main {
   font-size: 20px;
   padding: 10px;
   border-radius: 16px;
-  background-color: #ffa8B6;
+  background-color: #ebf6f5;
 }
 
 #header{
